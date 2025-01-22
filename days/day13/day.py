@@ -13,9 +13,9 @@ def main(day_input):
         else:
             plays.append({})
 
-    def solve(ax, ay, bx, by, px, py, mult=1):
-        px += mult
-        py += mult
+    def solve(ax, ay, bx, by, px, py, offset=0):
+        px += offset
+        py += offset
         A = (px*by - py*bx) / (ax*by - ay*bx)
         B = (py - ay * A) / by
         if A.is_integer() and B.is_integer():
